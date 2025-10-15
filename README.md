@@ -132,23 +132,4 @@ Flexibility: New dimensions or facts can be added without impacting existing one
 * **Schema Evolution** handled with dbt version control.
 
 
-## How to Run
-
-1. Clone the repository.
-2. Install dependencies listed in `requirements.txt`.
-3. Run scrapers to generate CSV data.
-4. Start Kafka and Spark for streaming.
-5. Load processed data into Snowflake using Airflow.
-6. Run dbt to transform and build analytics models.
-
-## Key Takeaways
-
-* Demonstrates complete data engineering lifecycle.
-* Combines batch and streaming data ingestion.
-* Uses modern tools: Kafka, Spark, Airflow, dbt, Snowflake.
-* Scalable, modular, and production-ready design.
-
-
-
-
 
