@@ -70,18 +70,6 @@ DIM: Listing_URL
 * **Monitoring** via Airflow and Kafka metrics.
 * **Schema Evolution** handled with dbt version control.
 
-## Repository Structure
-
-```
-used-phone-data-pipeline/
-├── scrapers/                # Python scrapers (Mobile Misr, Noon)
-├── producers/               # Kafka producers for data sources
-├── stream_processing/       # Spark streaming consumers
-├── warehouse/               # dbt models and SQL transformations
-├── docs/                    # Diagrams and documentation
-├── docker-compose.yml       # Local setup for Kafka, Spark, and Postgres
-└── README.md                # This file
-```
 
 ## How to Run
 
