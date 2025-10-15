@@ -58,9 +58,9 @@ DIM: source
 - source_id (PK)
 - source_name, source_domain
 
-DIM: location
-- location_id (PK)
-- city, region, country
+DIM: Listing_URL
+- URL_id (PK)
+- URL
 ```
 
 ## Performance & Quality
