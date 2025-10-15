@@ -41,26 +41,50 @@ This repository demonstrates a **near-real-time data pipeline** for a used phone
 ## Warehouse Schema Example
 
 ```
-FACT: used_phone_listings
+
+FACT: fact_used_phone_listings
 - listing_id (UUID)
+- date_id (FK)
 - product_id (FK)
 - source_id (FK)
+- seller_id (FK)
+- url_id (FK)
+- date_key (FK)
 - price_amount
 - price_currency
-- scraped_at
-- ingest_date
 
-DIM: product
+
+
+DIM: dim_product
 - product_id (PK)
-- brand, model, storage_gb, color
+- brand
+- model
+- storage_gb
 
-DIM: source
+
+
+DIM: dim_source
 - source_id (PK)
-- source_name, source_domain
+- source_domain
+- source_type
 
-DIM: Listing_URL
-- URL_id (PK)
-- URL
+
+DIM: dim_listing_url
+- url_id (PK)
+- full_url
+
+
+DIM: dim_seller
+- seller_id (PK)
+- seller_name
+
+
+DIM: dim_date
+- date_id (PK)
+- scraped_date
+- ingestion_date
+
+
 ```
 
 ### **Schema Diagram:**
@@ -82,6 +106,9 @@ DIM: Listing_URL
                          └─────────────┘       └─────────────┘
                                            
 
+
+
+```
 
 
 
