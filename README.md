@@ -63,6 +63,28 @@ DIM: Listing_URL
 - URL
 ```
 
+### **Schema Diagram:**
+```
+                                    ┌─────────────┐
+                                    │  dim_date   │
+                                    └──────┬──────┘
+                                           │
+                                           │
+┌─────────────┐          ┌─────────────────▼─────────────────┐          ┌──────────────────┐
+│ dim_product │◄─────────┤      fact_phone_listings          ├─────────►│ dim_listing_url  │
+└─────────────┘          └─────────────────┬─────────────────┘          └──────────────────┘
+                                           │
+                                           │
+                                ┌──────────┼──────────┐
+                                │                     │
+                         ┌──────▼──────┐       ┌──────▼──────┐
+                         │ dim_source  │       │ dim_seller  │
+                         └─────────────┘       └─────────────┘
+                                           
+
+
+
+
 ## Performance & Quality
 
 * **Partitioning** by `ingest_date` for faster queries.
@@ -86,7 +108,6 @@ DIM: Listing_URL
 * Combines batch and streaming data ingestion.
 * Uses modern tools: Kafka, Spark, Airflow, dbt, Snowflake.
 * Scalable, modular, and production-ready design.
-
 
 
 
