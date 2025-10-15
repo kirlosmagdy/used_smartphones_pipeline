@@ -99,7 +99,8 @@ used-phone-data-pipeline/
 * Uses modern tools: Kafka, Spark, Airflow, dbt, Snowflake.
 * Scalable, modular, and production-ready design.
 
-## Author
 
-**Kirlos Magdy**
-*Junior Data Engineer — Specialized in Data Pipelines, Azure, and Python*
+
+
+
+
