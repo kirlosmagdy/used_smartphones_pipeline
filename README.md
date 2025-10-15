@@ -38,6 +38,8 @@ This repository demonstrates a **near-real-time data pipeline** for a used phone
 4. **Airflow** orchestrates the scraping, streaming, and dbt transformation workflows.
 5. **dbt** builds analytics-ready star schema tables for BI and data science use cases.
 
+
+
 ## Warehouse Schema Example
 
 ```
@@ -60,7 +62,6 @@ DIM: dim_product
 - brand
 - model
 - storage_gb
-
 
 
 DIM: dim_source
@@ -89,6 +90,8 @@ DIM: dim_date
 
 ### **Schema Diagram:**
 ```
+
+
                                     ┌─────────────┐
                                     │  dim_date   │
                                     └──────┬──────┘
@@ -110,6 +113,15 @@ DIM: dim_date
 
 ```
 
+## Why Star Schema?
+
+Simplicity: Star schemas are easy to understand and query with simple joins.
+
+Performance: Optimized for analytical queries and aggregations in BI tools.
+
+Scalability: Handles large datasets efficiently by separating facts from dimensions.
+
+Flexibility: New dimensions or facts can be added without impacting existing ones.
 
 
 ## Performance & Quality
